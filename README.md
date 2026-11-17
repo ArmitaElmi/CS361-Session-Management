@@ -40,6 +40,7 @@ Successful response (200):
   "message": "Session is valid"
 }
 
+
 3. Update Session Activity
 
 Endpoint: `/sessions/activity`
@@ -51,8 +52,6 @@ Request:
 {
   "session_id": "generated-session-id"
 }
-The database is created automatically when the microservice starts.
-Tests can be ran with the following command: python test.py
 
 
 4. Check Session Timeout
@@ -64,6 +63,7 @@ Request:
 {
   "session_id": "generated-session-id"
 }
+
 
 5. Terminate a Session
 
@@ -78,6 +78,9 @@ Error response (404):
 {
   "error": "Session not found"
 }
+
+The database is created automatically when the microservice starts.
+Tests can be ran with the following command: python test.py
 
 
 ##UML Diagram:
