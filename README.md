@@ -5,8 +5,8 @@ Tto Run the Microservice:
 1. Install Flask: python -m pip install flask
 2.Start the microservice: python app.py
 3.The microservice runs at: http://127.0.0.1:5003
-API Communication
 
+API Communication:
 The microservice communicates with other programs using HTTP requests through a REST API. Request and response data are formatted as JSON.
 
 1. Create a Session:
@@ -40,9 +40,46 @@ Successful response (200):
   "message": "Session is valid"
 }
 
+3. Update Session Activity
+
+Endpoint: `/sessions/activity`
+
+Method: POST
+
+Request:
+```json
+{
+  "session_id": "generated-session-id"
+}
 The database is created automatically when the microservice starts.
 Tests can be ran with the following command: python test.py
 
+
+4. Check Session Timeout
+
+Endpoint: `/sessions/check_timeout`
+Method: POST
+Request:
+```json
+{
+  "session_id": "generated-session-id"
+}
+
+5. Terminate a Session
+
+Endpoint: `/sessions/<session_id>`
+Method: DELETE
+Description: Ends an active session by marking it as inactive in the database.
+Successful response (200):
+{
+  "message": "Session terminated successfully"
+}
+Error response (404):
+{
+  "error": "Session not found"
+}
+
+
 ##UML Diagram:
-![Sssion Management UML Sequence Diagram](Session-Management-Diagram)
+![Session Management UML Sequence Diagram](Session-Management-Diagram)
 
