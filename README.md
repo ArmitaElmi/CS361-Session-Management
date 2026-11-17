@@ -87,3 +87,33 @@ Error response (404):
 {
   "error": "Session not found"
 }
+
+
+
+## Example: Requesting and Receiving Data
+
+The following Python example shows how another program can communicate with the Session Management microservice using HTTP requests.
+
+Requesting data:
+
+import requests
+
+url = "http://127.0.0.1:5003"
+
+response = requests.post(
+    url + "/sessions",
+    json={"user_id": "user01"}
+)
+
+Receiving data:
+
+if response.status_code == 201:
+    session_data = response.json()
+
+    session_id = session_data["session_id"]
+    user_id = session_data["user_id"]
+
+    print("Session ID:", session_id)
+    print("User ID:", user_id)
+
+Explanation:The test program sends a POST request with a user ID. The microservice processes the request and returns a JSON response containing the session ID and user ID. The test program receives and reads that response using response.json().
