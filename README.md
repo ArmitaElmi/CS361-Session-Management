@@ -12,7 +12,7 @@ Tests can be ran with the following command: python test.py
 
 
 ##UML Diagram:
-![Session Management UML Sequence Diagram](Session-Management-Diagram)
+![Session Management UML Sequence Diagram](updatedUML)
 
 
 API Communication:
