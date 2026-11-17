@@ -6,6 +6,15 @@ Tto Run the Microservice:
 2.Start the microservice: python app.py
 3.The microservice runs at: http://127.0.0.1:5003
 
+
+The database is created automatically when the microservice starts.
+Tests can be ran with the following command: python test.py
+
+
+##UML Diagram:
+![Session Management UML Sequence Diagram](Session-Management-Diagram)
+
+
 API Communication:
 The microservice communicates with other programs using HTTP requests through a REST API. Request and response data are formatted as JSON.
 
@@ -78,11 +87,3 @@ Error response (404):
 {
   "error": "Session not found"
 }
-
-The database is created automatically when the microservice starts.
-Tests can be ran with the following command: python test.py
-
-
-##UML Diagram:
-![Session Management UML Sequence Diagram](Session-Management-Diagram)
-
