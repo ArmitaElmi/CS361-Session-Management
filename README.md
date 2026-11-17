@@ -4,7 +4,7 @@ Overview: The Session Management microservice creates and validates user session
 Tto Run the Microservice:
 1. Install Flask: python -m pip install flask
 2.Start the microservice: python app.py
-3.The microservice runs at: http://127.0.0.1:5001
+3.The microservice runs at: http://127.0.0.1:5003
 API Communication
 
 The microservice communicates with other programs using HTTP requests through a REST API. Request and response data are formatted as JSON.
@@ -42,3 +42,7 @@ Successful response (200):
 
 The database is created automatically when the microservice starts.
 Tests can be ran with the following command: python test.py
+
+##UML Diagram:
+![Sssion Management UML Sequence Diagram](Session-Management-Diagram)
+
